@@ -101,7 +101,7 @@ const Hero = () => {
               className="mb-6 font-title text-4xl font-bold leading-none text-white md:text-5xl lg:text-7xl"
             >
               <span className="block mb-2">HI, I'M</span>
-              <span className="block bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-[#14F195] to-purple-400">SUMANRAJ</span>
+              <span className="block bg-clip-text text-transparent bg-gradient-to-r from-purple-500 via-[#14F195] to-purple-400">SUMANRAJ P</span>
             </motion.h1>
             
             {/* Animated typing text with glitch effect container */}
