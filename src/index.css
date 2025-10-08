@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@100;200;300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: 'Sora', system-ui, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #030712;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+  scroll-padding-top: 84px; /* ensure in-view anchors account for fixed navbar */
+}
+
+/* Custom animations */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 5px rgba(56, 189, 248, 0.3), 0 0 10px rgba(14, 165, 233, 0.2); }
+  50% { box-shadow: 0 0 10px rgba(56, 189, 248, 0.5), 0 0 20px rgba(14, 165, 233, 0.3); }
+  100% { box-shadow: 0 0 5px rgba(56, 189, 248, 0.3), 0 0 10px rgba(14, 165, 233, 0.2); }
+}
+
+@keyframes techLine {
+  0% { width: 0; opacity: 0; }
+  50% { width: 100%; opacity: 0.5; }
+  100% { width: 0; opacity: 0; }
+}
+
+@keyframes scanning {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
+
+/* Apply animations to classes */
+.floating {
+  animation: float 4s ease-in-out infinite;
+}
+
+.pulse-glow {
+  animation: pulse-glow 3s infinite;
+}
+
+.tech-line {
+  position: relative;
+  overflow: hidden;
+}
+
+.tech-line::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background: linear-gradient(90deg, transparent, rgba(45, 212, 191, 0.7), transparent);
+  animation: techLine 4s ease-in-out infinite;
+}
+
+.scanning-bg {
+  background: linear-gradient(45deg, rgba(14, 165, 233, 0.05) 25%, transparent 25%, transparent 50%, rgba(45, 212, 191, 0.05) 50%, rgba(45, 212, 191, 0.05) 75%, transparent 75%);
+  background-size: 4px 4px;
+  animation: scanning 30s linear infinite;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+/* Wave animation for emoji */
+@keyframes wave {
+  0% { transform: rotate(0deg); }
+  10% { transform: rotate(14deg); }
+  20% { transform: rotate(-8deg); }
+  30% { transform: rotate(14deg); }
+  40% { transform: rotate(-4deg); }
+  50% { transform: rotate(10deg); }
+  60% { transform: rotate(0deg); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-wave {
+  animation: wave 2.5s ease infinite;
+  transform-origin: 70% 70%;
+  display: inline-block;
+}
+
+/* Text cursor blink animation */
+@keyframes blink {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+/* Scroll down indicator animation */
+@keyframes scroll-down {
+  0% { transform: translateY(-8px); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateY(12px); opacity: 0; }
+}
+
+.animate-scroll-down {
+  animation: scroll-down 1.5s ease-in-out infinite;
+}
