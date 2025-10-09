@@ -153,7 +153,7 @@ const Hero = () => {
               className="mb-8 flex space-x-4"
             >
               <a 
-                href="https://linkedin.com/in/sumanraj" 
+                href="https://www.linkedin.com/in/p-sumanraj/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-neutral-900/80 p-3 font-tech text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg"
@@ -166,7 +166,7 @@ const Hero = () => {
                 </svg>
               </a>
               <a 
-                href="https://github.com/sumanraj-js" 
+                href="https://github.com/Sumanraj-P" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="group relative inline-flex items-center justify-center overflow-hidden rounded-lg bg-neutral-900/80 p-3 font-tech text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-lg"
@@ -210,18 +210,19 @@ const Hero = () => {
                   </svg>
                 </span>
               </button>
-              <a 
-                href="/assets/resume-placeholder.txt" 
-                target="_blank" 
+              {/* Single Resume button in Hero (opens Drive viewer) */}
+              <a
+                href="https://drive.google.com/file/d/1aL9dnbpIxw5gQnUiPZb9Dey6gnSeIYy0/view?usp=sharing"
+                target="_blank"
                 rel="noopener noreferrer"
-                className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-neutral-900/80 px-8 py-3 font-tech font-medium text-white transition-all hover:scale-105"
+                aria-label="View Resume on Google Drive"
+                className="group relative inline-flex h-12 items-center justify-center overflow-hidden rounded-md bg-gradient-to-r from-purple-500 to-[#14F195] px-8 py-3 font-tech font-medium text-white transition-all hover:scale-105"
               >
-                <span className="absolute left-0 h-full w-[2px] bg-gradient-to-b from-purple-500 to-[#14F195] transition-all duration-300 group-hover:w-1"></span>
+                <span className="absolute inset-px rounded-md bg-[#030712] transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#030712]/80 group-hover:to-[#030712]/80"></span>
                 <span className="relative flex items-center gap-2">
                   <span>RESUME</span>
-                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" className="text-[#14F195] transition-transform duration-300 group-hover:translate-x-1">
-                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5z"/>
-                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708l3 3z"/>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16" className="transition-transform duration-300 group-hover:translate-x-1">
+                    <path d="M1.5 1.5h13v13h-13v-13zm1 1v11h11v-11h-11zm5 2h1v5h-1v-5zm-2 7h5v1h-5v-1z"/>
                   </svg>
                 </span>
               </a>

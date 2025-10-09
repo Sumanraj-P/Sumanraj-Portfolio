@@ -113,16 +113,21 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Resume Button */}
+        {/* Resume Download (navbar) - styled like Hero CTA */}
         <a
-          href="/resume.pdf"
-          download="Sumanraj_Resume.pdf"
-          className="hidden md:flex items-center px-4 py-2 bg-teal-500 text-white rounded-lg hover:bg-teal-600 transition-colors duration-300 font-medium"
+          href="https://drive.google.com/uc?export=download&id=1aL9dnbpIxw5gQnUiPZb9Dey6gnSeIYy0"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download Resume"
+          className="hidden md:inline-flex group relative h-12 items-center justify-center overflow-hidden rounded-md bg-gradient-to-r from-purple-500 to-[#14F195] px-8 py-3 font-tech font-medium text-white transition-all hover:scale-105"
         >
-          <span>Resume</span>
-          <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-          </svg>
+          <span className="absolute inset-px rounded-md bg-[#030712] transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#030712]/80 group-hover:to-[#030712]/80"></span>
+          <span className="relative flex items-center gap-2">
+            <span>RESUME</span>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+          </span>
         </a>
 
         {/* Mobile Menu Button */}
@@ -183,8 +188,9 @@ const Navbar = () => {
             ))}
             <li>
               <a
-                href="/resume.pdf"
-                download="Sumanraj_Resume.pdf"
+                href="https://drive.google.com/uc?export=download&id=1aL9dnbpIxw5gQnUiPZb9Dey6gnSeIYy0"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex items-center py-2 text-teal-400"
               >
                 <span>Download Resume</span>
