@@ -69,7 +69,7 @@ const Navbar = () => {
         scrolled ? "bg-slate-900/80 backdrop-blur-md shadow-md py-3" : "bg-transparent py-5"
       } transition-all duration-300`}
     >
-      <div className="container mx-auto px-6 flex items-center justify-between">
+  <div className="container mx-auto px-6 flex items-center justify-between font-display">
         {/* Logo */}
         <motion.a 
           href="#hero" 
@@ -79,7 +79,7 @@ const Navbar = () => {
           whileTap={{ scale: 0.95 }}
         >
           <span className="text-teal-400">&lt;</span>
-          <span>Sumanraj</span>
+          <span>SUMANRAJ P</span>
           <span className="text-teal-400">/&gt;</span>
         </motion.a>
 
@@ -119,7 +119,7 @@ const Navbar = () => {
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Download Resume"
-          className="hidden md:inline-flex group relative h-12 items-center justify-center overflow-hidden rounded-md bg-gradient-to-r from-purple-500 to-[#14F195] px-8 py-3 font-tech font-medium text-white transition-all hover:scale-105"
+          className="hidden md:inline-flex group relative h-12 items-center justify-center overflow-hidden rounded-md bg-gradient-to-r from-purple-500 to-[#14F195] px-8 py-3 font-display font-medium text-white transition-all hover:scale-105"
         >
           <span className="absolute inset-px rounded-md bg-[#030712] transition-all duration-300 group-hover:bg-gradient-to-r group-hover:from-[#030712]/80 group-hover:to-[#030712]/80"></span>
           <span className="relative flex items-center gap-2">
@@ -171,7 +171,7 @@ const Navbar = () => {
         transition={{ duration: 0.3 }}
         className="md:hidden overflow-hidden bg-slate-800"
       >
-        <div className="container mx-auto px-6 py-4">
+        <div className="container mx-auto px-6 py-4 font-display">
           <ul className="space-y-4">
             {navItems.map((item) => (
               <li key={item.id}>
